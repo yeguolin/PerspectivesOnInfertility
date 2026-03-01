@@ -1,2 +1,59 @@
-# PerspectivesOnInfertility
-Perspectives on Infertility in Chinese Social Media: A Comparative Content Analysis of Microblogs on Weibo
+# Perspectives on Infertility in Chinese Social Media: A Comparative Content Analysis
+
+这是一个基于 Python 的自然语言处理（NLP）项目，旨在通过对 **2018 年**与 **2023 年**新浪微博数据的对比分析，探讨中国社交媒体上关于“不孕不育”话题的舆论演变、公众态度及社会心理。
+
+
+
+## 🌟 项目亮点
+- **多维度对比**：分析五年前后公众对生育焦虑、辅助生殖技术及政策态度的变化。
+- **自动化清洗**：针对微博特有的 `#话题#` 格式进行正则清洗，并实现敏感词（城市、医生、医院）的批量泛化处理。
+- **智能语义筛选**：集成大语言模型（LLM）接口，自动识别并过滤无关文本。
+- **深度文本挖掘**：结合 TF-IDF 权重算法、LDA 主题模型建模以及 K-Means 聚类分析。
+
+## 🛠 运行环境
+
+项目已在以下环境测试通过，核心依赖库如下：
+
+### 核心处理逻辑所需：
+* **数据处理**: `pandas`, `numpy`, `openpyxl`
+* **NLP/分词**: `jieba`
+* **机器学习**: `scikit-learn` (LDA, KMeans, PCA, CountVectorizer)
+* **可视化**: `matplotlib`, `wordcloud`, `mglearn`
+* **网络请求**: `requests` (用于 LLM API 交互)
+
+### 你的现有环境支持：
+你的环境已配置高性能组件，支持后续扩展：
+* **后端支持**: `fastapi`, `uvicorn` (可用于部署分析 API)
+* **AI 增强**: `agno`, `langchain`, `openai` (支持更复杂的 RAG 增强分析)
+* **数据库**: `SQLAlchemy`, `pgvector` (支持向量检索分析)
+
+## 📂 文件说明
+
+* `2018.ipynb`: 2018 年度微博数据分析主程序。
+* `2023.ipynb`: 2023 年度微博数据分析主程序。
+* `low_2018.xlsx` / `low_2023.xlsx`: 对应的原始微博抓取数据。
+* `stop_words.txt`: 中文停用词表，用于分词优化。
+
+## 🚀 快速开始
+
+1.  **数据脱敏**：
+    程序会自动调用 `replace_sensitive_words` 函数，将文本中的具体医院名、医生名替换为通用标签（如“医院”、“医生”），以符合伦理研究规范。
+
+2.  **主题提取**：
+    运行 LDA 单元格，程序将自动尝试 $k \in [3, 6]$ 的不同主题数量，并使用 `mglearn` 输出每个主题下的前 20 个高频关键词。
+
+3.  **结果可视化**：
+    执行绘图单元格，生成词云图及 PCA 降维后的聚类分布图。
+
+
+
+## 📊 研究方法
+
+本项目采用**对比性内容分析法**：
+1.  **文本获取**：从微博平台抓取特定关键词的博文。
+2.  **相关性判断**：利用 LLM 对文本进行“是/否”相关性标注。
+3.  **特征提取**：构建 TF-IDF 文档词项矩阵。
+4.  **话题演变分析**：对比两个年份 LDA 模型的 Topic 权重分布，分析社会热点迁移。
+
+---
+*注：本项目仅供学术研究使用。*
