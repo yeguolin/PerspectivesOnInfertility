@@ -21,12 +21,6 @@
 * **可视化**: `matplotlib`, `wordcloud`, `mglearn`
 * **网络请求**: `requests` (用于 LLM API 交互)
 
-### 你的现有环境支持：
-你的环境已配置高性能组件，支持后续扩展：
-* **后端支持**: `fastapi`, `uvicorn` (可用于部署分析 API)
-* **AI 增强**: `agno`, `langchain`, `openai` (支持更复杂的 RAG 增强分析)
-* **数据库**: `SQLAlchemy`, `pgvector` (支持向量检索分析)
-
 ## 📂 文件说明
 
 * `2018.ipynb`: 2018 年度微博数据分析主程序。
