@@ -8,7 +8,7 @@ This is a Python-based Natural Language Processing (NLP) project designed to exp
 
 ## 🌟 Project Highlights
 
-- **Comparative Analysis**: Investigates shifts in public anxiety, attitudes toward Assisted Reproductive Technology (ART), and responses to population policies across two distinct time points.
+- **Comparative Analysis**: Investigates shifts in public anxiety, attitudes toward Assisted Reproductive Technology (ART), and responses to policies across two distinct time points.
 - **Automated Preprocessing**: Features custom regex-based cleaning for Weibo's unique `#Topic#` formats and batch generalization of sensitive entities (cities, doctors, and hospitals).
 - **Intelligent Semantic Filtering**: Integrated Large Language Model (LLM) APIs to automatically identify and filter out noisy or irrelevant text.
 - **Deep Text Mining**: Leverages TF-IDF weighting, LDA (Latent Dirichlet Allocation) topic modeling, and K-Means clustering for robust thematic discovery.
